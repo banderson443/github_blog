@@ -1,4 +1,4 @@
-/* Super Mario Cloud Style Buttons */
+/* Super Mario Cloud Style Buttons - Override simple.css */
 
 [role=button],
 button,
@@ -6,21 +6,21 @@ input[type=button],
 input[type=reset],
 input[type=submit],
 label[type=button] {
-  border: none;
-  border-radius: 25px;
-  background-color: var(--accent);
-  font-size: 1rem;
-  color: var(--bg);
-  padding: 0.7rem 1.5rem;
-  margin: 0.5rem 0;
-  font-family: inherit;
-  position: relative;
-  transition: all 0.2s ease;
+  border: none !important;
+  border-radius: 25px !important;
+  background-color: var(--accent) !important;
+  font-size: 1rem !important;
+  color: var(--bg) !important;
+  padding: 0.7rem 1.5rem !important;
+  margin: 0.5rem 0 !important;
+  font-family: inherit !important;
+  position: relative !important;
+  transition: all 0.2s ease !important;
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.25),
-              0 0 0 3px var(--accent);
-  cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+              0 0 0 3px var(--accent) !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
 }
 
 /* Hover state - press effect */
@@ -31,9 +31,9 @@ input[type=reset]:enabled:hover,
 input[type=submit]:enabled:hover,
 label[type=button]:hover {
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.25),
-              0 0 0 3px var(--accent);
-  transform: translateY(3px);
-  filter: brightness(1.15);
+              0 0 0 3px var(--accent) !important;
+  transform: translateY(3px) !important;
+  filter: brightness(1.15) !important;
 }
 
 /* Active state - fully pressed */
@@ -44,16 +44,35 @@ input[type=reset]:active,
 input[type=submit]:active,
 label[type=button]:active {
   box-shadow: 0 0px 0 rgba(0, 0, 0, 0.25),
-              0 0 0 3px var(--accent);
-  transform: translateY(6px);
+              0 0 0 3px var(--accent) !important;
+  transform: translateY(6px) !important;
 }
 
 /* Focus state */
 [role=button]:focus-visible:where(:enabled,[role=button]:not([aria-disabled=true])),
 input:enabled:focus-visible:where([type=submit],[type=reset],[type=button]) {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  outline: 2px solid var(--accent) !important;
+  outline-offset: 2px !important;
 }
+
+/* Specific class selector for dev page buttons (higher specificity) */
+.cloud-btn {
+  border-radius: 30px !important;
+  padding: 0.9rem 1.6rem !important;
+  box-shadow: 0 8px 0 rgba(0,0,0,0.28) !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+}
+
+.cloud-btn:hover {
+  transform: translateY(3px) !important;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.22) !important;
+}
+
+.cloud-btn:active {
+  transform: translateY(6px) !important;
+  box-shadow: 0 0 0 rgba(0,0,0,0.2) !important;
+}
+
 
 
 
