@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="/static/simple.css-2.2.1/simple.min.css" />
     <!-- Available themes: theme.css (dark/amber), theme-blue.css (blue/black), theme-matrix.css (matrix), theme-ellie.css (fairy princess) -->
     <link rel="stylesheet" href="/static/theme.css" id="theme-stylesheet" />
+    <script>
+      // Load saved theme on page load
+      const savedTheme = localStorage.getItem('selectedTheme');
+      if (savedTheme) {
+        document.getElementById('theme-stylesheet').href = '/static/' + savedTheme;
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
