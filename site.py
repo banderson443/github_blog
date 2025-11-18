@@ -341,6 +341,17 @@ def copy_texts(content: str, output: str) -> None:
         shutil.copyfile(file, str(dst_path / Path(file).name))
 
 
+def copy_cname(output: str) -> None:
+    """Copy CNAME file to output directory for GitHub Pages."""
+    cname_file = Path("CNAME")
+    if cname_file.exists():
+        dst_file = Path(output) / "CNAME"
+        shutil.copyfile(str(cname_file), str(dst_file))
+        logger.info("Copied CNAME to %s", dst_file)
+    else:
+        logger.info("No CNAME file found, skipping")
+
+
 def build_dev_page(env, output: str) -> None:
     """Build the hidden developer tools page."""
     template = env.get_template("dev.html")
@@ -456,6 +467,7 @@ def build(config):
     build_dev_page(env, output)
     build_static(output)
     copy_texts(content, output)
+    copy_cname(output)
 
     elapsed = round(time() - start, 2)
     logger.info("Completed in %s seconds", elapsed)
