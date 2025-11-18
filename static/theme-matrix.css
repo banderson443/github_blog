@@ -1,0 +1,39 @@
+/* Matrix style theme */
+:root {
+  color-scheme: dark;
+  --bg: #000000;
+  --accent-bg: #0a0a0a;
+  --text: #00ff00;
+  --text-light: #00cc00;
+  --border: #003300;
+  --accent: #00ff00;
+  --code: #00ff00;
+  --preformatted: #00ff00;
+  --disabled: #001a00;
+  --marked: #00ff00;
+}
+
+img,
+video {
+  opacity: 0.6;
+  filter: brightness(0.8);
+}
+
+/* Optional: Add a subtle glow effect to text */
+body {
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+}
+
+a,
+a:visited {
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-shadow: 0 0 12px rgba(0, 255, 0, 0.2);
+}

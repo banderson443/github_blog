@@ -1,0 +1,19 @@
+/* Blue/Black theme */
+:root {
+  color-scheme: dark;
+  --bg: #0a0e27;
+  --accent-bg: #1a1f3a;
+  --text: #e0e6ff;
+  --text-light: #a0a6c0;
+  --border: #3a4070;
+  --accent: #00d4ff;
+  --code: #00ffff;
+  --preformatted: #c0e0ff;
+  --disabled: #0f1425;
+  --marked: #0066cc;
+}
+
+img,
+video {
+  opacity: 0.8;
+}
