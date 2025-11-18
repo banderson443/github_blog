@@ -1,0 +1,95 @@
+/* Super Mario Cloud Style Buttons */
+
+[role=button],
+button,
+input[type=button],
+input[type=reset],
+input[type=submit],
+label[type=button] {
+  border: none;
+  border-radius: 50px;
+  background-color: var(--accent);
+  font-size: 1rem;
+  color: var(--bg);
+  padding: 0.7rem 1.5rem;
+  margin: 0.5rem 0;
+  font-family: inherit;
+  position: relative;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Cloud puff effect on pseudo-elements */
+[role=button]::before,
+button::before,
+input[type=button]::before,
+input[type=reset]::before,
+input[type=submit]::before,
+label[type=button]::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 15%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+[role=button]::after,
+button::after,
+input[type=button]::after,
+input[type=reset]::after,
+input[type=submit]::after,
+label[type=button]::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 20%;
+  width: 18px;
+  height: 18px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+/* Hover state - press effect */
+[role=button]:not([aria-disabled=true]):hover,
+button:enabled:hover,
+input[type=button]:enabled:hover,
+input[type=reset]:enabled:hover,
+input[type=submit]:enabled:hover,
+label[type=button]:hover {
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+  filter: brightness(1.1);
+}
+
+/* Active state - fully pressed */
+[role=button]:active,
+button:active,
+input[type=button]:active,
+input[type=reset]:active,
+input[type=submit]:active,
+label[type=button]:active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(4px);
+}
+
+/* Disabled state */
+button[disabled],
+input:disabled,
+select:disabled,
+textarea:disabled {
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0.6;
+}
+
+/* Focus state */
+[role=button]:focus-visible:where(:enabled,[role=button]:not([aria-disabled=true])),
+input:enabled:focus-visible:where([type=submit],[type=reset],[type=button]) {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
