@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="NOINDEX, NOFOLLOW" />
+    <title>Developer Tools - blog.banderson443.me</title>
+    <link rel="stylesheet" href="/static/simple.css-2.2.1/simple.min.css" />
+    <link rel="stylesheet" href="/static/theme.css" />
+    <style type="text/css">
+      h1, h2, h3 {
+        font-family: "Rubik Doodle Shadow", serif;
+      }
+      h4, h5, h6 {
+        font-family: "Abril Fatface", serif;
+      }
+      code, pre {
+        font-family: "Anonymous Pro", monospace;
+      }
+      .theme-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+      .theme-card {
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        padding: 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .theme-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+      .theme-card h3 {
+        margin-top: 0;
+      }
+      .theme-preview {
+        width: 100%;
+        height: 120px;
+        border-radius: 6px;
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      .preview-amber {
+        background: linear-gradient(135deg, #212121 0%, #2b2b2b 100%);
+      }
+      .preview-blue {
+        background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+      }
+      .preview-matrix {
+        background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+      }
+      .preview-ellie {
+        background: linear-gradient(135deg, #fce7f3 0%, #f5e6f0 100%);
+      }
+      button {
+        width: 100%;
+        padding: 0.7rem;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/dev">Dev</a>
+      </nav>
+      <h1>🛠️ Developer Tools</h1>
+    </header>
+    <main>
+      <h2>Theme Switcher</h2>
+      <p>Select a theme to preview it. Your choice is saved in your browser.</p>
+      
+      <div class="theme-grid">
+        <div class="theme-card">
+          <h3>Amber</h3>
+          <div class="theme-preview preview-amber">Dark + Amber</div>
+          <p>Classic dark mode with warm amber accents. Great for nighttime browsing.</p>
+          <button onclick="setTheme('theme.css')">Select Amber</button>
+        </div>
+        
+        <div class="theme-card">
+          <h3>Blue</h3>
+          <div class="theme-preview preview-blue">Blue/Black</div>
+          <p>Sleek blue and black with cyan accents. Perfect for tech vibes.</p>
+          <button onclick="setTheme('theme-blue.css')">Select Blue</button>
+        </div>
+        
+        <div class="theme-card">
+          <h3>Matrix</h3>
+          <div class="theme-preview preview-matrix">Matrix Green</div>
+          <p>Classic green-on-black hacker aesthetic with glow effects.</p>
+          <button onclick="setTheme('theme-matrix.css')">Select Matrix</button>
+        </div>
+        
+        <div class="theme-card">
+          <h3>Ellie</h3>
+          <div class="theme-preview preview-ellie">Fairy Princess</div>
+          <p>Magical pink and purple fairy princess theme. Soft and elegant.</p>
+          <button onclick="setTheme('theme-ellie.css')">Select Ellie</button>
+        </div>
+      </div>
+
+      <h2>Current Theme</h2>
+      <p>Active theme: <strong id="current-theme">Amber</strong></p>
+      <button onclick="resetTheme()">Reset to Default</button>
+    </main>
+    <footer>
+      Developer tools - Hidden page for theme selection
+    </footer>
+
+    <script>
+      const THEME_STORAGE_KEY = 'selectedTheme';
+      const THEME_NAMES = {
+        'theme.css': 'Amber',
+        'theme-blue.css': 'Blue',
+        'theme-matrix.css': 'Matrix',
+        'theme-ellie.css': 'Ellie'
+      };
+
+      function setTheme(themeName) {
+        const themeLink = document.getElementById('theme-stylesheet');
+        if (themeLink) {
+          themeLink.href = '/static/' + themeName;
+          localStorage.setItem(THEME_STORAGE_KEY, themeName);
+          document.getElementById('current-theme').textContent = THEME_NAMES[themeName];
+          console.log('Theme switched to:', themeName);
+        }
+      }
+
+      function resetTheme() {
+        localStorage.removeItem(THEME_STORAGE_KEY);
+        const themeLink = document.getElementById('theme-stylesheet');
+        if (themeLink) {
+          themeLink.href = '/static/theme.css';
+          document.getElementById('current-theme').textContent = 'Amber';
+        }
+      }
+
+      function initTheme() {
+        const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+        if (savedTheme) {
+          setTheme(savedTheme);
+        } else {
+          document.getElementById('current-theme').textContent = 'Amber';
+        }
+      }
+
+      // Initialize on page load
+      window.addEventListener('load', initTheme);
+    </script>
+  </body>
+</html>

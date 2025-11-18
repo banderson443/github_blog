@@ -341,6 +341,18 @@ def copy_texts(content: str, output: str) -> None:
         shutil.copyfile(file, str(dst_path / Path(file).name))
 
 
+def build_dev_page(env, output: str) -> None:
+    """Build the hidden developer tools page."""
+    template = env.get_template("dev.html")
+    html_content = template.render()
+    dev_path = Path(output) / Path("dev")
+    dev_path.mkdir(parents=True, exist_ok=True)
+    dev_file = dev_path / Path("index.html")
+    with open(dev_file, "w") as f:
+        f.write(html_content)
+        logger.info("Wrote: %s", dev_file)
+
+
 @click.group()
 def cli():
     pass
@@ -441,6 +453,7 @@ def build(config):
     build_date_archives(env, output, index, cfg)
     build_feeds(output, index, cfg)
     build_sitemap(output, index, cfg)
+    build_dev_page(env, output)
     build_static(output)
     copy_texts(content, output)
 
