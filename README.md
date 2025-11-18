@@ -1,6 +1,6 @@
 # banderson443.github.io
 
-Python based static site generator. This is also now my personal site.
+Python based static site generator. This is also my personal site for now.
 
 ## Goals
 

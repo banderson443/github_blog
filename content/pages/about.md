@@ -14,19 +14,11 @@ Tech enthusiast, Security junky, and open source aficionado; Expertise in solvin
 
 ### The short bio.
 
-
-
 ### The longer bio.
 
-
-
-
-
-
-
-## Other places online
+## Find me other places online
 
 - [Github](https://github.com/banderson443)
 - [LinkedIn](http://www.linkedin.com/in/banderson443)
-- 
+-
 - 
