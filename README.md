@@ -1,19 +1,18 @@
 # banderson443.github.io
 
-Whoops, I built a static site generator. This is also now my personal site.
+Python based static site generator. This is also now my personal site.
 
 ## Goals
 
 Why did I do this?
 
-> mostly because I'm lazy and got tired of trying to learn the other sysems (hugo)
+> mostly because I'm lazy and wanted a python based blog, maybe i'll put something useful here. 
 
-I also had some very clear goals:
+ goals:
 
 - Ability to write content in markdown (with support for [CommonMark](https://commonmark.org/)
-- I just wanted simple, easy-to-learn template engine (Hello Jinja)
-- Ability to keep the same URLs that I had in django-blargg (good urls don't change)
-- A command-line tool to build content (TBD, i'll get there eventually)
+- Simple, easy-to-learn template engine (Jinja)  
+- TODO: A command-line tool to build content (eta TBD)
 - Ability to just publish on github pages
 
 ### Content
