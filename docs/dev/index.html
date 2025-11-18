@@ -114,6 +114,12 @@
       <h2>Current Theme</h2>
       <p>Active theme: <strong id="current-theme">Amber</strong></p>
       <button class="cloud-btn" style="border-radius:25px;border:none;background-color:var(--accent);color:var(--bg);box-shadow:0 6px 0 rgba(0,0,0,0.25);transition:transform .12s;" onclick="resetTheme()">Reset to Default</button>
+
+      <hr />
+
+      <h2>Debug Info</h2>
+      <p><strong>Computed styles for .cloud-btn buttons:</strong></p>
+      <pre id="debug-output" style="background-color:var(--bg);color:var(--text);padding:1rem;border-radius:4px;overflow-x:auto;"></pre>
     </main>
     <footer>
       Developer tools - Hidden page for theme selection
@@ -154,8 +160,42 @@
         document.getElementById('current-theme').textContent = displayTheme;
       }
 
+      function debugComputedStyles() {
+        const btn = document.querySelector('.cloud-btn');
+        if (!btn) {
+          document.getElementById('debug-output').textContent = 'ERROR: No .cloud-btn element found';
+          return;
+        }
+        const cs = getComputedStyle(btn);
+        const debugInfo = `
+Button Element: ${btn.tagName}
+Classes: ${btn.className}
+
+Computed Styles:
+  borderRadius: ${cs.borderRadius}
+  boxShadow: ${cs.boxShadow}
+  backgroundColor: ${cs.backgroundColor}
+  color: ${cs.color}
+  border: ${cs.border}
+  display: ${cs.display}
+  padding: ${cs.padding}
+  width: ${cs.width}
+  height: ${cs.height}
+  
+Inline style attribute:
+  ${btn.getAttribute('style') || '(none)'}
+
+Parent element: ${btn.parentElement.tagName}.${btn.parentElement.className}
+        `.trim();
+        document.getElementById('debug-output').textContent = debugInfo;
+        console.log('Cloud button debug info:', btn, cs);
+      }
+
       // Initialize on page load
-      window.addEventListener('DOMContentLoaded', initTheme);
+      window.addEventListener('DOMContentLoaded', function() {
+        initTheme();
+        debugComputedStyles();
+      });
     </script>
   </body>
 </html>
