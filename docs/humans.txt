@@ -1,0 +1,10 @@
+/* TEAM */
+Who: Brad Montgomery
+GitHub: https://github.com/bradmontgomery/
+LinkedIn: https://www.linkedin.com/in/bkmontgomery/
+From: Memphis, TN USA
+
+/* SITE */
+Standards: HTML5
+Components: HTML, CSS, Markdown, Python
+Software: https://github.com/bradmontgomery/bradmontgomery.github.io

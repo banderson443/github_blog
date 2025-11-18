@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body%}
+  <section>
+  {% if subtitle %}<h2>{{ subtitle }}</h2>{% endif %}
+
+  <ul>
+  {% for tag, link in tags %}
+    <li><a href="{{ link }}">{{ tag }}</a></li>
+  {% endfor %}
+  </ul>
+
+  </section>
+{% endblock %}

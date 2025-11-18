@@ -1,0 +1,17 @@
+# Dev requirements
+pip-tools
+black
+isort
+flake8
+
+# Actual requirements
+arrow
+rich
+click
+rich-click
+Jinja2
+markdown-it-py
+linkify-it-py
+mdit-py-plugins
+ez_yaml
+feedgen

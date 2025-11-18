@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block body%}
+  {% if draft %}<h1>DRAFT</h1>{% endif %}
+  <section>
+    {% if date %}
+      <p>Published on {{ date }}</p>
+    {% endif %}
+    {% if tags %}
+      <p>Tags: {{ tags|join(", ") }}</p>
+    {% endif %}
+
+    <article>
+    {{ html_content|safe }}
+    </article>
+  </section>
+{% endblock %}

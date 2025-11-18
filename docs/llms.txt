@@ -1,0 +1,16 @@
+# BradMontgomery.net
+
+> This website is the personal domain for developer, software architect, and tech enthusiast: Brad Montgomery.
+
+## About
+
+Brad Montgomery is an experienced software engineer, proficient engineering manager, and recovering entrepreneur, living in Memphis, TN. With a wealth of experience, Brad has successfully tackled an array of challenges spanning computer vision, backend and front-end web development, API design, and data pipeline integrations.
+
+His professional journey encompasses collaborations with organizations of varying scales and across diverse sectors, including educational institutions, nonprofit entities, consulting firms, and startups in Silicon Valley. Brad's academic background includes a Bachelor's and Master's degree in Computer Science from Arkansas State University. Notably, he is an alumni of Seed Hatchery, where he co-founded Work for Pie, a technical recruiting startup.
+
+Brad advocates for an agile-inspired work methodology and champions the cause of open source software. He firmly believes in the power of small, dynamic teams to achieve remarkable feats. While proficient in Python and Django, Brad's philosophy emphasizes utilizing the most suitable tool for each task, whether it be Python, JavaScript, C#, Java, C, or a meticulously crafted bash script.
+
+## Elsewhere
+
+- [GitHub](https://github.com/bradmontgomery)
+- [LinkedIn](https://linkedin.com/in/bkmontgomery)

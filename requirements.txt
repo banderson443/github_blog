@@ -1,0 +1,17 @@
+# Core dependencies with flexible versions
+arrow>=1.2.0
+rich>=10.0.0
+click>=8.0.0
+rich-click>=1.6.0
+Jinja2>=3.0.0
+markdown-it-py>=3.0.0
+linkify-it-py>=2.0.0
+mdit-py-plugins>=0.4.0
+ez_yaml>=1.2.0
+feedgen>=0.9.0
+
+# Dev requirements (optional)
+pip-tools>=6.0.0
+black>=23.0.0
+isort>=5.0.0
+flake8>=6.0.0

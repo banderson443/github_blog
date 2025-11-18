@@ -1,0 +1,17 @@
+site:
+  title: "Firstname Lastname"
+  author: "Firstname Lastname"
+  url: "https://blog.banderson443.me"
+  description: "Personal blog and writings"
+paths:
+  content: "content"
+  output: "docs"
+  templates: "templates"
+  static: "static"
+build:
+  posts_per_page: 20
+  include_drafts: false
+feeds:
+  enabled: true
+  rss_path: "/feed/rss/"
+  atom_path: "/feed/atom/"
