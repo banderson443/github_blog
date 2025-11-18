@@ -1,0 +1,107 @@
+/* Ellie Theme - Fairy Princess */
+:root {
+  color-scheme: light;
+  --bg: #faf7f2;
+  --accent-bg: #f5e6f0;
+  --text: #3d2645;
+  --text-light: #6b5b7a;
+  --border: #e6c5e6;
+  --accent: #d946a6;
+  --code: #c2185b;
+  --preformatted: #5a3f5a;
+  --disabled: #f0e0ea;
+  --marked: #ffc0e8;
+}
+
+img,
+video {
+  opacity: 0.95;
+  border-radius: 12px;
+}
+
+/* Add magical sparkle effects */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #b83a93;
+  text-shadow: 0 2px 4px rgba(217, 70, 166, 0.1);
+}
+
+a,
+a:visited {
+  color: #d946a6;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #f472b6;
+  text-decoration: underline;
+}
+
+/* Soften buttons and interactive elements */
+[role=button],
+button,
+input[type=button],
+input[type=reset],
+input[type=submit],
+label[type=button] {
+  background-color: #ec4899;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+[role=button]:hover,
+button:enabled:hover,
+input[type=button]:enabled:hover,
+input[type=reset]:enabled:hover,
+input[type=submit]:enabled:hover,
+label[type=button]:hover {
+  background-color: #f472b6;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+/* Soften borders and add rounded corners */
+article,
+dialog,
+fieldset,
+aside,
+details,
+pre,
+progress {
+  border-radius: 12px;
+  border-color: #e6c5e6;
+}
+
+/* Header styling */
+body > header {
+  background: linear-gradient(135deg, #fce7f3 0%, #f5e6f0 100%);
+  border-bottom: 2px solid #f472b6;
+}
+
+body > header h1 {
+  color: #be185d;
+  letter-spacing: 0.5px;
+}
+
+/* Footer styling */
+body > footer {
+  border-top: 2px solid #f472b6;
+  color: #7c3aed;
+}
+
+/* Navigation styling */
+header > nav a,
+header > nav a:visited {
+  border-color: #f472b6;
+  color: #b83a93;
+  transition: all 0.3s ease;
+}
+
+header > nav a:hover,
+header > nav a.current {
+  background-color: #fce7f3;
+  color: #d946a6;
+}
