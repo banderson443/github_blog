@@ -7,21 +7,20 @@ input[type=reset],
 input[type=submit],
 label[type=button] {
   border: none;
-  border-radius: 50px;
-  background: radial-gradient(circle at 30% -20%, var(--accent), var(--accent) 30%, transparent 70%),
-              radial-gradient(circle at 70% -15%, var(--accent), var(--accent) 28%, transparent 65%),
-              var(--accent);
-  background-size: 100% 100%, 100% 100%, 100% 100%;
-  background-repeat: no-repeat, no-repeat, no-repeat;
+  border-radius: 25px;
+  background-color: var(--accent);
   font-size: 1rem;
   color: var(--bg);
-  padding: 1.2rem 1.5rem 0.7rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   margin: 0.5rem 0;
   font-family: inherit;
   position: relative;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.25),
+              0 0 0 3px var(--accent);
   cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 /* Hover state - press effect */
@@ -31,9 +30,10 @@ input[type=button]:enabled:hover,
 input[type=reset]:enabled:hover,
 input[type=submit]:enabled:hover,
 label[type=button]:hover {
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
-  transform: translateY(2px);
-  filter: brightness(1.1);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.25),
+              0 0 0 3px var(--accent);
+  transform: translateY(3px);
+  filter: brightness(1.15);
 }
 
 /* Active state - fully pressed */
@@ -43,15 +43,17 @@ input[type=button]:active,
 input[type=reset]:active,
 input[type=submit]:active,
 label[type=button]:active {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-  transform: translateY(4px);
+  box-shadow: 0 0px 0 rgba(0, 0, 0, 0.25),
+              0 0 0 3px var(--accent);
+  transform: translateY(6px);
 }
 
 /* Focus state */
 [role=button]:focus-visible:where(:enabled,[role=button]:not([aria-disabled=true])),
 input:enabled:focus-visible:where([type=submit],[type=reset],[type=button]) {
-  outline: 3px solid var(--accent);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
 
 
