@@ -22,5 +22,5 @@ Tech enthusiast, Security junky, and open source aficionado; Expertise in solvin
 - [LinkedIn](http://www.linkedin.com/in/banderson443)
 - hey mags 
 - 
- - [hey mags](https://www.youtube.com/watch?v=qyKPK8LoUA8&list=RDqyKPK8LoUA8&start_radio=1)
+- [hey mags](https://www.youtube.com/watch?v=qyKPK8LoUA8&list=RDqyKPK8LoUA8&start_radio=1)
 
