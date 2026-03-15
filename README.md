@@ -33,3 +33,8 @@ The index page should be a listing of _recent_ posts.
 - [jinja](https://jinja.palletsprojects.com/)
 - [markdown-it-py](https://github.com/executablebooks/markdown-it-py)
 - [simple.css](https://github.com/kevquirk/simple.css)
+
+## build push
+- Edit files in content/
+- python3 site.py build
+- git add . && git commit -m "..." && git push
