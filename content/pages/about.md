@@ -20,4 +20,4 @@ Tech enthusiast, Security junky, and open source aficionado; Expertise in solvin
 
 - [Github](https://github.com/banderson443)
 - [LinkedIn](http://www.linkedin.com/in/banderson443)
-- [hey mags](https://www.youtube.com/watch?v=qyKPK8LoUA8&list=RDqyKPK8LoUA8&start_radio=1)
+
